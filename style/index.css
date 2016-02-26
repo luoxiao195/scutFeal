@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+.news{
+	width:850px;
+	float:right;
+	overflow:hidden;
+}
+
+.item-type{
+	padding:5px 8px;
+	clear:both;
+	text-align:center;
+	float:left;
+	font-size:14px;
+	display:inline-block;
+}
+.newest a{
+	color:#333;
+	font-size:16px;
+	width:175px;
+	display:inline-block;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	height:25px;
+	line-height:25px;
+	-o-text-overflow:ellipsis;
+	white-space:nowrap;
+	pointer-events:none; 
+  cursor:default 
+}
+.newest a:hover{
+	color:#39c;
+	text-decoration:underline;
+}
+.item-time{
+	font-style:italic;
+	float:right;
+	padding:5px 8px;
+	font-size:14px;
+	display:inline-block;
+}
+#newest-title{
+	width:100%;
+	height:40px;
+	font-size:22px;
+	line-height:40px;
+	background-color:#0084ab;
+	color:#eee;
+	text-indent:20px;
+	/*border-radius:5px;*/
+	overflow:hidden;
+}
+.info-up ul{
+	padding-left:1.5em;
+}
+.info-up ul li{
+	list-style-type:disc;
+	color:#66C;
+}
+.info-up ul li a{
+	color:#66c;
+	display:inline-block;
+	margin:3px;
+}
+.info-up{
+	margin-bottom:10px;
+}
+.information{
+	width:330px;
+	float:right;
+	padding:15px;
+}
+.info-down{
+	color:#663;
+}
+/*.newest{
+	margin-top:20px;
+	color:#666;
+	width:400px;
+	float:left;
+	box-shadow:5px 5px 5px 2px #999;
+	border:2px solid #999;
+	border-radius:8px;
+	margin-right:20px;
+	height:200px;
+	overflow:hidden;
+}*/
+.newest{
+	margin-top:-1px;
+	color:#666;
+	width:848px;
+	float:left;
+	/*box-shadow:5px 5px 5px 2px #999;*/
+	border:1px solid #999;
+	/*border-radius:8px;*/
+	margin-right:20px;
+	height:270px;
+	overflow:hidden;
+}
+/*#info-box{
+	overflow:hidden;
+	width:400px;
+	height:148px;
+}*/
+#info-box{
+	overflow:hidden;
+	width:400px;
+	height:218px;
+	float:right;
+}
+
+.show{
+	width:1100px;
+	margin:20px auto;
+	overflow:hidden;
+}
+.sub-show{
+	position:relative;
+}
+.title h3{
+	width:150px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	color:#fff;
+	position:absolute;
+	left:0px;
+	top:7px;
+}
+.wrapper{
+	width:500px;
+	height:200px;
+	margin-top:48px;
+	background-color:#ddd;
+}
+.good-item{
+	float:left;
+	width:170px;
+	height:180px;
+	text-align:center;
+	margin:18px 40px;
+}
+.good-item img{
+	width:170px;
+	height:150px;
+}
+.title span{
+	position:absolute;
+	color:#999;
+	left:160px;
+	top:20px;
+}
+.good-item a{
+	color:#0084ab;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+
+
+
+

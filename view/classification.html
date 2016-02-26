@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<META HTTP-EQUIV="pragma" CONTENT="no-cache">   
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">   
+<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">   
+<META HTTP-EQUIV="expires" CONTENT="0"> 
+<title>SCUT跳蚤市场</title>
+<link rel="stylesheet" href="../style/common.css">
+<link rel="stylesheet" href="../style/classfication.css">
+</head>
+
+<body>
+<div class="head">
+  <div class="header">
+    <p>华南理工大学跳蚤市场</p>
+    <!--<ul>
+      <li><a href="#">个人中心</a></li>
+      <li><a href="javascript:;" class="theme-regist">注 册</a></li>
+      <li>|</li>
+      <li><a href="javascript:;" class="theme-login">登 录</a></li>
+    </ul>-->
+  </div>
+  <div class="divider"></div>
+  <div class="search">
+    <h1 class="logo"><span class="scut">SCUT </span>跳蚤市场</h1>
+    <p>——让闲置物品发挥最大的作用</p>
+    <from class="search-form">
+      <input type="text" name="searchKey" id="searchkey" class="search-key" placeholder="我想要找......">
+      <input type="submit" value="" class="search-btn" id="search-btn">
+    </from>
+  </div>
+</div>
+<div class="nav">
+  <div class="nav-left">
+    <h3 class="cla-allproduct">全部商品分类<i class="shopClass_icon"></i></h3>
+    <ul class="main-ul">
+      <li><a href="classification.html" onClick="classify=1;$.cookie('CLASSIFY',1)">学习办公</a>
+        <p> <span><a href="subclassification.html" onClick="classify=11;$.cookie('CLASSIFY',11)">书籍</a></span><span><a href="subclassification.html" onClick="classify=12;$.cookie('CLASSIFY',12)">学习用品</a></span><span><a href="subclassification.html" onClick="classify=13;$.cookie('CLASSIFY',13)">办公用品</a></span></p>
+      </li>
+      <li><a href="classification.html" onClick="classify=2;$.cookie('CLASSIFY',2)">生活用品</a>
+        <p> <span><a href="subclassification.html" onClick="classify=21;$.cookie('CLASSIFY',21)">日常用品</a></span><span><a href="subclassification.html" onClick="classify=22;$.cookie('CLASSIFY',22)">小家电</a></span></p>
+      </li>
+      <li> <a href="classification.html" onClick="classify=3;$.cookie('CLASSIFY',3)">数码产品</a>
+        <p><span><a href="subclassification.html" onClick="classify=31;$.cookie('CLASSIFY',31)">手机（用品）</a></span><span><a href="subclassification.html" onClick="classify=32;$.cookie('CLASSIFY',32)">电子产品</a></span> <span><a href="subclassification.html" onClick="classify=33;$.cookie('CLASSIFY',33)">电脑（用品）</a></span> </p>
+      </li>
+      <li><a href="subclassification.html" onClick="classify=4;$.cookie('CLASSIFY',4)">其他物品</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <ul>
+      <li><a class="on" href="index.html">首 页</a></li>
+      <li><a href="subclassification.html" onClick="classify=5;$.cookie('CLASSIFY',5)">出 售</a></li>
+      <li><a href="subclassification.html"onClick="classify=6;$.cookie('CLASSIFY',6)">求 购</a></li>
+      <li><a href="subclassification.html"onClick="classify=7;$.cookie('CLASSIFY',7)">出 租</a></li>
+      <li><a href="subclassification.html"onClick="classify=8;$.cookie('CLASSIFY',8)">找 租</a></li>
+    </ul>
+  </div>
+  <div class="cla-content">
+    <div class="cla-layer" id="cla-layer1">
+      <div class="cla-layerTitle">
+        <div class="inner-claTitle">
+          <div class="cla-subTitle">书籍</div>
+          <span class="cla-more fr"><a href="#">&gt;&gt;more</a></span> </div>
+      </div>
+      <div class="cla-item-list">
+        <div class="cla-item"><a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+<!--            <p class="cla-des">新旧程度：<span class="cla-descon">xxxx</span></p>
+            </br>
+-->            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>
+        <div class="cla-item"><a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+<!--            <p class="cla-des">新旧程度：<span class="cla-descon">xxxx</span></p>
+            </br>
+-->            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>
+        <div class="cla-item"><a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+<!--            <p class="cla-des">新旧程度：<span class="cla-descon">xxxx</span></p>
+            </br>
+-->            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>  
+      </div>
+    </div>
+    <div class="cla-layer" id="cla-layer2">
+      <div class="cla-layerTitle">
+        <div class="inner-claTitle">
+          <div class="cla-subTitle">学习用品</div>
+          <span class="cla-more fr"><a href="#">&gt;&gt;more</a></span> </div>
+      </div>
+      <div class="cla-item-list">
+        <div class="cla-item"><a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+<!--            <p class="cla-des">新旧程度：<span class="cla-descon">xxxx</span></p>
+            </br>
+-->            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>
+        <div class="cla-item"><a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+<!--            <p class="cla-des">新旧程度：<span class="cla-descon">xxxx</span></p>
+            </br>
+-->            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>
+        <div class="cla-item"><a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+<!--            <p class="cla-des">新旧程度：<span class="cla-descon">xxxx</span></p>
+            </br>
+-->            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>  
+      </div>
+    </div>
+    <div class="cla-layer" id="cla-layer3">
+      <div class="cla-layerTitle">
+        <div class="inner-claTitle">
+          <div class="cla-subTitle">办公用品</div>
+          <span class="cla-more fr"><a href="#">&gt;&gt;more</a></span> </div>
+      </div>
+      <div class="cla-item-list">
+        <div class="cla-item"><a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+<!--            <p class="cla-des">新旧程度：<span class="cla-descon">xxxx</span></p>
+            </br>
+-->            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>
+        <div class="cla-item"><a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+<!--            <p class="cla-des">新旧程度：<span class="cla-descon">xxxx</span></p>
+            </br>
+-->            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>
+        <div class="cla-item"><a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+<!--            <p class="cla-des">新旧程度：<span class="cla-descon">xxxx</span></p>
+            </br>
+-->            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>  
+      </div>
+    </div>
+    <div class="cla-div"></div>
+    <div class="footer"> Copyright&nbsp;©&nbsp;SCUTFEAL-TEAM </div>
+  </div>
+</div>
+<!--<div class="theme-popover login">
+  <div class="theme-poptit"> <a href="javascript:;" title="关闭" class="close">×</a>
+    <h3 style="font-weight:100">登录到SCUT跳蚤市场</h3>
+  </div>
+  <div class="theme-popbod dform">
+    <form class="theme-signin" name="loginform" action="" method="post">
+      <ol style="margin-top:-15px;">
+        <li><strong style="display:inline-block;width:100px;text-align:center;">邮 箱 ：</strong>
+          <input class="ipt" type="email" name="email" placeholder="您的邮箱" size="30" />
+        </li>
+        <li><strong style="display:inline-block;width:100px;text-align:center;">密 码 ：</strong>
+          <input class="ipt" type="password" name="pwd" placeholder="请输入密码" size="30" />
+        </li>
+        <div>
+          <li><strong style="display:inline-block;width:100px;text-align:center;">验证码：</strong>
+            <input class="ipt verify" type="text" name="verify" placeholder="" size="8" />
+            <img class="veri-img" src="../public/no-pictrue.png"> </li>
+        </div>
+        <li>
+          <input class="btn btn-primary" type="submit" name="submit" value=" 登 录 " style="width:300px;height:40px;font-size:22px;font-weight:200"/>
+        </li>
+      </ol>
+    </form>
+  </div>
+</div>-->
+<!--<div class="theme-popover regist">
+  <div class="theme-poptit"> <a href="javascript:;" title="关闭" class="close">×</a>
+    <h3 style="font-weight:100">SCUT跳蚤市场用户注册</h3>
+  </div>
+  <div class="theme-popbod dform">
+    <form class="theme-signin" name="loginform" action="" method="post">
+      <ol style="margin-top:-15px;">
+        <li><strong style="display:inline-block;width:100px;text-align:center;">用户名：</strong>
+          <input class="ipt" type="text" name="log" placeholder="您的用户名" size="30" />
+        </li>
+        <li><strong style="display:inline-block;width:100px;text-align:center;">邮 箱 ：</strong>
+          <input class="ipt" type="email" name="email" placeholder="您的邮箱" size="30" />
+        </li>
+        <li><strong style="display:inline-block;width:100px;text-align:center;">密 码 ：</strong>
+          <input class="ipt" type="password" name="pwd" placeholder="请输入密码" size="30" />
+        </li>
+        <div>
+          <li><strong style="display:inline-block;width:100px;text-align:center;">验证码：</strong>
+            <input class="ipt verify" type="text" name="verify" placeholder="" size="8" />
+            <img class="veri-img" src="../public/no-pictrue.png"> </li>
+        </div>
+        <li>
+          <input class="btn btn-primary" type="submit" name="submit" value=" 注 册 " style="width:300px;height:40px;font-size:22px;font-weight:200"/>
+        </li>
+      </ol>
+    </form>
+  </div>
+</div>-->
+<div class="theme-popover-mask"></div>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.js"></script> 
+<script src="../script/common.js"></script> 
+<script src="../script/classification.js"></script>
+</body>
+</html>

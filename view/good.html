@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+<META HTTP-EQUIV="expires" CONTENT="0">
+<title>SCUT跳蚤市场</title>
+<link rel="stylesheet" href="../style/common.css">
+<link rel="stylesheet" href="../style/good.css">
+</head>
+
+<body>
+<div class="head">
+  <div class="header">
+    <p>华南理工大学跳蚤市场</p>
+    <!--<ul>
+      <li><a href="#">个人中心</a></li>
+      <li><a href="javascript:;" class="theme-regist">注 册</a></li>
+      <li>|</li>
+      <li><a href="javascript:;" class="theme-login">登 录</a></li>
+    </ul>--> 
+  </div>
+  <div class="divider"></div>
+  <div class="search">
+    <h1 class="logo"><span class="scut">SCUT </span>跳蚤市场</h1>
+    <p>——让闲置物品发挥最大的作用</p>
+    <from class="search-form">
+      <input type="text" name="searchKey" id="searchkey" class="search-key" placeholder="我想要找......">
+      <input type="submit" value="" class="search-btn" id="search-btn">
+    </from>
+  </div>
+</div>
+<div class="nav">
+  <div class="nav-left">
+    <h3 class="cla-allproduct">全部商品分类<i class="shopClass_icon"></i></h3>
+    <ul class="main-ul">
+      <li><a href="classification.html" onClick="classify=1;$.cookie('CLASSIFY',1)">学习办公</a>
+        <p> <span><a href="subclassification.html" onClick="classify=11;$.cookie('CLASSIFY',11)">书籍</a></span><span><a href="subclassification.html" onClick="classify=12;$.cookie('CLASSIFY',12)">学习用品</a></span><span><a href="subclassification.html" onClick="classify=13;$.cookie('CLASSIFY',13)">办公用品</a></span></p>
+      </li>
+      <li><a href="classification.html" onClick="classify=2;$.cookie('CLASSIFY',2)">生活用品</a>
+        <p> <span><a href="subclassification.html" onClick="classify=21;$.cookie('CLASSIFY',21)">日常用品</a></span><span><a href="subclassification.html" onClick="classify=22;$.cookie('CLASSIFY',22)">小家电</a></span></p>
+      </li>
+      <li> <a href="classification.html" onClick="classify=3;$.cookie('CLASSIFY',3)">数码产品</a>
+        <p><span><a href="subclassification.html" onClick="classify=31;$.cookie('CLASSIFY',31)">手机（用品）</a></span><span><a href="subclassification.html" onClick="classify=32;$.cookie('CLASSIFY',32)">电子产品</a></span> <span><a href="subclassification.html" onClick="classify=33;$.cookie('CLASSIFY',33)">电脑（用品）</a></span> </p>
+      </li>
+      <li><a href="subclassification.html" onClick="classify=4;$.cookie('CLASSIFY',4)">其他物品</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <ul>
+      <li><a class="on" href="index.html">首 页</a></li>
+      <li><a href="subclassification.html" onClick="classify=5;$.cookie('CLASSIFY',5)">出 售</a></li>
+      <li><a href="subclassification.html"onClick="classify=6;$.cookie('CLASSIFY',6)">求 购</a></li>
+      <li><a href="subclassification.html"onClick="classify=7;$.cookie('CLASSIFY',7)">出 租</a></li>
+      <li><a href="subclassification.html"onClick="classify=8;$.cookie('CLASSIFY',8)">找 租</a></li>
+    </ul>
+  </div>
+  <div class="good-container">
+    <div class="good-info">
+      <div class="fl good-info-image"> <img src="../public/no-pictrue.png" id="bigimg" class="good-info-image-up">
+        <div class="good-info-image-down">
+          <div class="fl" id="good1"> <img src="../public/no-pictrue.png"> <img src="../public/no-pictrue.png"> <img src="../public/no-pictrue.png">
+            <div id="good-info-image-down-collect"><img id="star" class="star" src="../public/star.png"></div>
+          </div>
+        </div>
+      </div>
+      <div class="fr good-info-message">
+        <h3 id="good-info-message-title">商品名称</h3>
+        <div class="good-info-message-subtitle"> 交易类型：<span id="good-info-message-type">出售</span></br>
+          商品分类：<span id="good-info-message-label">书籍</span></br>
+          参考价格: <span id="good-info-message-price">111</span></br>
+          <p>交易状态：<span id="good-info-message-end">发布中</span></p>
+          <div class="good-info-message-desc">商品详情介绍：
+            <p id="good-info-message-desc">就是一些介绍吖</p>
+          </div>
+          发布时间：<span id="good-info-message-pubtime">2015******</span> </div>
+      </div>
+    </div>
+    <div class="good-contact">
+      <div style="border-bottom:5px solid #0084AB;"> <span class="contact-info">联系方式</span></br>
+      </div>
+      <table border="1" cellpadding="0" cellspacing="0" width="1100px" style="border-color:#DCDCDC">
+        <tr>
+          <td>交易发布人</td>
+          <td>某某某</td>
+          <td>联系电话</td>
+          <td>18811112222</td>
+        </tr>
+        <tr>
+          <td>QQ号码</td>
+          <td>1234567890</td>
+          <td>联系邮箱</td>
+          <td>1234567890@qq.com</td>
+        </tr>
+      </table>
+    </div>
+    <div class="good-discuss">
+      <div style="border-bottom:5px solid #0084AB;"> <span class="contact-info">大家的评论</span></br>
+      </div>
+      <div id="conment-area">
+        <div class="comment-item">
+          <p>发布用户：1234567890@qq.com</p>
+          <p class="comment-time">发布时间：2015-12-25</p>
+          <textarea style="width:1050px" rows="6" readonly>dawebabadfhqhqbtqa
+      
+      
+      gwqerqegq
+      qgqgq
+      </textarea>
+        </div>
+        </br>
+        <div class="comment-item">
+          <p>发布用户：1234567890@qq.com</p>
+          <p class="comment-time">发布时间：2015-12-25</p>
+          <textarea style="width:1050px" rows="6" readonly>dawebabadfhqhqbtqa
+      
+      
+      gwqerqegq
+      
+      
+      
+      
+      
+      
+      
+      qgqgq
+      </textarea>
+        </div>
+        </br>
+        <div class="comment-item">
+          <p>发布用户：1234567890@qq.com</p>
+          <p class="comment-time">发布时间：2015-12-25</p>
+          <textarea style="width:1050px" rows="6" readonly>dawebabadfhqhqbtqa
+      
+      
+      gwqerqegq
+      qgqgq
+      </textarea>
+        </div>
+      </div>
+    </div>
+    <div class="pub-comment">
+    <div style="border-bottom:5px solid #0084AB;"> <span class="contact-info">发布评论</span></br>
+      </div>
+      <textarea id="pubcomcontent" style="width:1086px;border:2px solid #0084AB;font-size:16px;color:#999; padding:5px;" rows="6" placeholder="发表你关于这件商品的看法吧"></textarea>
+      <button id="pubcomment" class="btn btn-primary" style="font-size:14px;">发布评论</button>
+    </div>
+    <div class="footer" style="z-index:-1"> Copyright&nbsp;©&nbsp;SCUTFEAL-TEAM </div>
+  </div>
+</div>
+<div class="theme-popover-mask"></div>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.js"></script> 
+<script src="../script/common.js"></script> 
+<script src="../script/good.js"></script>
+</body>
+</html>

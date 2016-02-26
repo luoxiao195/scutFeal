@@ -1,0 +1,395 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人中心</title>
+<link href="../style/bootstrap.min.css" rel="stylesheet">
+<link href="../style/common.css" rel="stylesheet">
+<link href="../style/selfcenter.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="head">
+  <div class="header">
+    <p><a href="index.html">华南理工大学跳蚤市场</a></p>
+    <ul>
+      <li><a href="#">个人中心</a></li>
+      <li><a href='index.html' onclick='logoff()'>退 出</a></li>
+      <li>|</li>     
+      <li>用户账号</li>
+    </ul>
+  </div>
+</div>
+<div class="wrapper">
+  <div id="ul-1" class="leftside fl">
+    <ul>
+      <li class="menu-title">&nbsp;<span class="glyphicon glyphicon-book"></span>信息中心</li>
+      <li class="center-select"  onClick="dismymsg()"><a href="javascript:;">查看我的信息</a></li>
+      <li><a href="javascript:;">修改我的信息</a></li>
+    </ul>
+    <ul>
+      <li class="menu-title">&nbsp;<span class="glyphicon glyphicon-send"></span>发布中心</li>
+      <li onClick="dismypub()"><a href="javascript:;">我发布的交易</a></li>
+      <li><a href="javascript:;">发布新的交易</a></li>
+    </ul>
+    <ul>
+      <li class="menu-title">&nbsp;<span class="glyphicon glyphicon-heart-empty"></span>关注中心</li>
+      <li><a href="javascript:;">出售区关注</a></li>
+      <li><a href="javascript:;">求购区关注</a></li>
+      <li><a href="javascript:;">出租区关注</a></li>
+      <li><a href="javascript:;">找租区关注</a></li>
+    </ul>
+  </div>
+  <div class="rightside fr">
+    <div id="info-1" class="read-msg">
+      <h3>用户信息</h3>
+      <hr>
+      <ul class="info-list">
+        <li>昵称：<span class="modify-power">可修改</span><span class="msgitem" id="info1-nickname">undefined</span></li>
+        <li>注册邮箱：<span class="modify-power">不可修改</span><span class="msgitem" id="info1-email">邮箱</span></li>
+        <li>性别：<span class="modify-power">可修改</span><span class="msgitem" id="info1-sex">保密</span></li>
+        <li>注册时间：<span class="modify-power">不可修改</span><span class="msgitem" id="info1-time">2015-11-03 10：55：23</span></li>
+        <li>手机号码：<span class="modify-power">可修改</span><span class="msgitem" id="info1-phone">null</span></li>
+        <li>QQ号码：<span class="modify-power">可修改</span><span class="msgitem" id="info1-qq">null</span></li>
+      </ul>
+    </div>
+    <div id="info-2" class="modify-msg hide">
+      <h3>修改用户信息</h3>
+      <hr>
+      <form id="modify-form" name="modify-info" method="post">
+        <ul>
+          <li>昵 称<br>
+            <input class="modyfy-input" type="text" id="info2-nickname" value="原来的昵称">
+          </li>
+          <br>
+          <span id="modify-warn" style="font-style:italic">更换密码请输入新密码，否则请输入原密码！</span>
+          <li>请输入新密码<br>
+            <input class="modyfy-input" type="password" id="info2-psd1">
+          </li>
+          <li>确认输入密码<br>
+            <input class="modyfy-input" type="password" id="info2-psd2">
+          </li>
+          <li>手机号码<br>
+            <input class="modyfy-input" type="text" id="info2-phone">
+          </li>
+          <li>QQ号码<br>
+            <input class="modyfy-input" type="text" id="info2-qq">
+          </li>
+          <li style="margin-top:20px">性 别<br>
+            保 密
+            <input type="radio" name="sex" value="保密" checked="true">
+            男 性
+            <input type="radio" name="sex" value="男性">
+            女 性
+            <input type="radio" name="sex" value="女性">
+          </li>
+          <br>
+          <li>
+            <input id="info2-submit" class="btn btn-primary" type="button" name="submit-btn" value="确认修改" style="width:250px;height:40px;font-size:18px;font-weight:100"/>
+          </li>
+        </ul>
+      </form>  
+    </div>
+    <div id="info-3" class="my-publish hide">
+      <h3>我的发布</h3>
+      <hr>
+      <div class="info3">
+     <!-- <div class="cla-item"><img class="fl" src="../public/no-pictrue.png">
+        <p class="cla-itemName">商品名称</p>
+        </br>
+        <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+        </br>
+        <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+        </br>
+        <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+        </br>
+        <button class="btn finishjy">结束交易</button>
+      </div>
+      <div class="cla-item"><img class="fl" src="../public/no-pictrue.png">
+        <p class="cla-itemName">商品名称</p>
+        </br>
+        <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+        </br>
+        <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+        </br>
+        <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+        </br>
+        <button class="btn finishjy">结束交易</button>
+      </div>
+      <div class="cla-item"><img class="fl" src="../public/no-pictrue.png">
+        <p class="cla-itemName">商品名称</p>
+        </br>
+        <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+        </br>
+        <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+        </br>
+        <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+        </br>
+        <button class="btn finishjy">结束交易</button>
+      </div>-->
+      </div>
+      <div style="clear:both"></div>
+      <div class="page" style="text-align:center;margin-bottom:50px;">
+			<a href="#">上一页</a>&nbsp;<a style="cursor:default">第&nbsp;1&nbsp;页</a>&nbsp;<a href="#">下一页</a>
+		</div>
+    </div>
+    <div id="info-4" class="new-publish hide">
+      <h3>发布新交易</h3>
+      <hr>
+      <div id="publicItem">
+        <ul id="publicInfo">
+          <li><span class="public-title">商品名称：</span></br>
+            <input id="gdname" class="goodName" type="text">
+            </br>
+          </li>
+          <li><span class="public-title">商品参考价格：</span></br>
+            <input id="gdprice" class="goodPrice" type="number" placeholder="单位：/元">
+            </br>
+          </li>
+          <li><span class="public-title">发布类型：</span></br>
+            <input type="radio" name="goodType" checked="checked" value="出售" id="type1">
+            出售&nbsp;
+            <input type="radio" name="goodType" value="求购" id="type2">
+            求购&nbsp;
+            <input type="radio" name="goodType" value="出租" id="type3">
+            出租&nbsp;
+            <input type="radio" name="goodType" value="找租" id="type4">
+            找租</br>
+          </li>
+          <li><span class="public-title">商品简要描述:</span></br>
+            <textarea id="gddesc" class="goodDesc" cols="50" rows="3" placeholder="请在此处输入商品的简要描述"></textarea>
+            </br>
+          </li>
+          <li><span class="public-title">请选择商品的分类</span>
+            <ul id="goodOption" class="nav nav-tabs" style="padding-top:50px">
+              <li class="active" style="width:150px"><a href="#option1" data-toggle="tab">学习用品</a></li>
+              <li style="width:150px"><a href="#option2" data-toggle="tab">生活用品</a></li>
+              <li style="width:150px"><a href="#option3" data-toggle="tab">数码产品</a></li>
+              <li style="width:150px"><a href="#option4" data-toggle="tab">其他物品</a></li>
+            </ul>
+            <div id="optionContent" class="tab-content">
+              <div class="tab-pane active" id="option1">
+                <input name="label" type="radio" id="suboption1" checked="checked" value="书籍">
+                书籍&nbsp;&nbsp;
+                <input name="label" value="学习用品" type="radio" id="suboption2">
+                学习用品&nbsp;&nbsp;
+                <input name="label" value="办公用品" type="radio" id="suboption3">
+                办公用品 </div>
+              <div class="tab-pane" id="option2">
+                <input name="label" value="日常用品" type="radio" id="suboption4">
+                日常用品&nbsp;&nbsp;
+                <input name="label" value="小家电" type="radio" id="suboption5">
+                小家电&nbsp;&nbsp; </div>
+              <div class="tab-pane" id="option3">
+                <input name="label" value="手机（用品）" type="radio" id="suboption6">
+                手机（用品）&nbsp;
+                <input name="label" value="电子产品" type="radio" id="suboption7">
+                电子产品&nbsp;
+                <input name="label" value="电脑（用品）" type="radio" id="suboption8">
+                电脑（用品）&nbsp;&nbsp; </div>
+              <div class="tab-pane" id="option4">
+                <input name="label" value="其它" type="radio" id="suboption9">
+                以上类别尚未找到符合心意的分类&nbsp;&nbsp; </div>
+            </div>
+          </li>
+          <li><span class="public-title">商品图片上传（少于三张）</span>
+            <div class="demo">
+              <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
+                <div class="upload_box">
+                  <div class="upload_main">
+                    <div class="upload_choose">
+                      <input id="fileImage" type="file" size="30" name="fileselect[]" multiple>
+                      <span id="fileDragArea" class="upload_drag_area">或者将图片拖到此处</span> </div>
+                    <div id="preview" class="upload_preview"></div>
+                  </div>
+                  <div class="upload_submit">
+                    <button type="button" id="fileSubmit" class="upload_submit_btn">确认上传图片(不可修改）</button>
+                  </div>
+                  <div id="uploadInf" class="upload_inf"></div>
+                </div>
+              </form>
+            </div>
+            <input id="public-btn" class="btn btn-primary" type="button" name="public-btn" value="发布（不可修改）" style="width:250px;height:40px;font-size:18px;font-weight:100;margin-bottom:20px"/>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="info-5" class="concern1 hide">
+      <h3>出售区关注</h3>
+      <hr>
+      <div class="info5">
+        <!--<div class="cla-item"> <a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>
+        <div class="cla-item"> <a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>
+        <div class="cla-item"> <a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>-->
+      </div>
+      <div style="clear:both"></div>
+      <div class="page" style="text-align:center;margin-bottom:50px;">
+			<a href="#">上一页</a>&nbsp;<a style="cursor:default">第&nbsp;1&nbsp;页</a>&nbsp;<a href="#">下一页</a>
+		</div>
+    </div>
+    <div id="info-6" class="concern2 hide">
+      <h3>求购区关注</h3>
+      <hr>
+      <div class="info6">
+        <!--<div class="cla-item"> <a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>
+        <div class="cla-item"> <a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>
+        <div class="cla-item"> <a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>-->
+      </div>
+      <div style="clear:both"></div>
+      <div class="page" style="text-align:center;margin-bottom:50px;">
+			<a href="#">上一页</a>&nbsp;<a style="cursor:default">第&nbsp;1&nbsp;页</a>&nbsp;<a href="#">下一页</a>
+		</div>
+    </div>
+    <div id="info-7" class="concern3 hide">
+      <h3>出租区关注</h3>
+      <hr>
+      <div class="info7">
+        <!--<div class="cla-item"> <a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>
+        <div class="cla-item"> <a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>
+        <div class="cla-item"> <a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>-->
+      </div>
+      <div style="clear:both"></div>
+      <div class="page" style="text-align:center;margin-bottom:50px;">
+			<a href="#">上一页</a>&nbsp;<a style="cursor:default">第&nbsp;1&nbsp;页</a>&nbsp;<a href="#">下一页</a>
+		</div>
+    </div>
+    <div  id="info-8" class="concern4 hide">
+      <h3>招租区关注</h3>
+      <hr>
+      <div class="info8">
+        <!--<div class="cla-item"> <a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>
+        <div class="cla-item"> <a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>
+        <div class="cla-item"> <a href="#"> <img class="fl" src="../public/no-pictrue.png">
+            <p class="cla-itemName">商品名称</p>
+            </br>
+            <p class="cla-des">价格：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">上架时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+            <p class="cla-des">结束时间：<span class="cla-descon">xxxx</span></p>
+            </br>
+          </a> </div>-->
+      </div>
+      <div style="clear:both"></div>
+      <div class="page" style="text-align:center;margin-bottom:50px;">
+			<a href="#">上一页</a>&nbsp;<a style="cursor:default">第&nbsp;1&nbsp;页</a>&nbsp;<a href="#">下一页</a>
+		</div>
+    </div>
+  </div>
+</div>
+<div class="footer"> Copyright&nbsp;©&nbsp;SCUTFEAL-TEAM </div>
+<div class="theme-popover warn" style="width:600px;height:200px">
+  <div class="theme-poptit warn"> <a href="javascript:;" title="关闭" class="close">×</a>
+    <h3 style="font-weight:700;color:#148cc4">提示信息</h3>
+  </div>
+  <p style="color:#d9534f;font-weight:500;font-size:20px;text-indent:2em;padding-top:30px;padding-left:10px">发生错误，操作失败！</p>
+</div>
+<div class="theme-popover-mask"></div>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script> 
+<script src="../script/common.js"></script> 
+<script src="../script/bootstrap.min.js"></script> 
+
+<script src="../script/selfcenter.js"></script> 
+<script src="zxxFile.js"></script> 
+<script src="upload.js"></script>
+</body>
+</html>
